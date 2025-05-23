@@ -1,3 +1,4 @@
+#if UNITY_STANDALONE_WIN
 using System;
 using HIDrogen.Imports.Windows;
 using UnityEngine;
@@ -20,7 +21,7 @@ namespace HIDrogen.Backend
         public const string InterfaceName = "XInput";
         public static readonly FourCC InputFormat = new FourCC('X', 'I', 'N', 'P');
 
-#if UNITY_STANDALONE_WIN
+
         private const double kRefreshPeriod = 1.0;
         private double m_LastRefreshTime;
 
@@ -147,6 +148,6 @@ namespace HIDrogen.Backend
 
             return null;
         }
-#endif
     }
 }
+#endif

@@ -191,7 +191,7 @@ namespace HIDrogen.Backend
         {
             var description = new InputDeviceDescription()
             {
-                interfaceName = XInputBackend.InterfaceName,
+                interfaceName = "XInput",
                 // User index is not included since this backend will not match up with XInput
                 capabilities = JsonUtility.ToJson(m_Capabilities),
             };
